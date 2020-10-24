@@ -1,5 +1,5 @@
 from django import forms
-from pybo.models import Question
+from .models import Question
 
 
 class QuestionForm(forms.ModelForm):
@@ -9,8 +9,4 @@ class QuestionForm(forms.ModelForm):
         widgets = {
             'subject': forms.TextInput(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control', 'rows': 10}),
-        }
-        labels = {
-            'subject': '제목',
-            'content': '내용',
         }
